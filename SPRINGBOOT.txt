@@ -1,0 +1,74 @@
+                                                                                    @@SPRONG BOOT
+Url: 
+1.https://www.youtube.com/watch?v=c3gKseNAs9w&t=1659s (Couse of spring boot)
+
+2.https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbTFsRGEtbjRrNGc2UFRad0VlcF9aU29iLWJsd3xBQ3Jtc0trMU95YTZuWjJEanFnR0s3N0s3YUVMSTJYaUxzWmtHQkRubkJKSlV3N2hldXZqVXlNRzJJZzVCdVBqNmF5QVFpc0t0V2xqN083bHQtaUk5TWRRbWpQWVV5YnZiSU51WVhZelFGczUwbjRwQWxmTjJHdw&q=https%3A%2F%2Fdocs.spring.io%2Fspring-data%2Fjpa%2Fdocs%2Fcurrent%2Freference%2Fhtml%2F%23jpa.query-methods&v=c3gKseNAs9w
+
+
+1.Dependend injection:It is default way for creating the different objects in the applications.
+2.IOC(Inversion of control):
+3.Spring initializer tool(start.spring.io):two tools available like Maven project and grade project,and add dependencies , H2 database(in-memory database)
+4.<groupid>: package name and <artifactId>: depency name 
+5.@SpringBootApplication: This is the key annoation of application.It is the staring point of main application.
+6.@ComponentScan: Scan all the components available in spring boot application and all these components should be added to the spring contanier when application is started.
+7.@Component: Create one class for example controller and annonated with component because make that class as component of the spring so that whenever application is started this particular class is added to the spring contanier for that we need to annonated that class with @Componet scan.
+8.@RestController: It is paticular controller as a component and it is always return response body
+9.@RequestMapping: When we hit the particular end point then that particular method to be excuted for that annonated with RequestMapping
+**Rest APIs are
+10.@GetMapping: Get all the apis/data from particular id(all most all time use the List type) (findAll() method)
+example: 
+1.Get all the data
+@GetMapping("/departments") [findAll() method]
+public List<Department> fetchAllData(){
+return departmentService.fetchAllData();
+}
+2.Get the particular data by using id 
+@GetMapping("/departments/{id}") {findById(departmentId) method}
+public Department fetchDataById(@PathVariable("id") Long departmentId){
+return departmentService.fetchDataById(departmentId);
+}
+For map the particular id with the departmentId for that we use @PathVaiable.
+11.@PostMapping: Save the particular apis/data (save() method)
+example:
+@PostMapping("/departments")
+public Department saveData(@RequestBody department department){
+return departmentService.saveData(department);
+}
+12.@PutMapping: Update the particular method using ids/data
+example:
+@PutMapping("/departments/{id}")
+public Department updateData(@PathVariable("id") Long departmentId, @RequestBody Department department){
+return departmentService.updateData(departmentId,department);
+}
+13.@DeleteMapping: For delete the particular apis/data
+example:
+@DeleteMapping("/departments/{id}") [deleteById(departmentId)]
+public String deleteData(@PathVariable("id") Long departmentId){
+ departmentService.deleteData(departmentId);
+ return "Data is deletd sucessfully!."
+}
+
+14.Form the forntend we call the REST APIs,then call Service Layer is a business layer that have all business logic that handle of our depertment will be adding in that business layer, Controller layer is just to get the paticular request and get the response back.
+15.Repository Layer: It is responsible to interact with Database
+16.Spring Data JPA: Persist data in SQL stores with Java Persistance API using Spring Data and Hibernet.
+17.@Entity: To make a particular class as an entity so we can annonate with entity . So that it can interact with our database using JPA we need to annoated with @Entity.
+18.@Id: To make as a primary key 
+19.@GeneratedValue(strategy= GenerationType.AUTO): how you want to generate the primary key
+20.@service: It is used to annonated with SeviceImpl class or Sevice class
+21.@Repository: It is used for annonated Interface class and that interface class extends the JpaRepository<Name of the entity class, Primary key type like Long>
+22.@RequestBody: Json data is converted into Particular Entity class type data(Entity class Object)
+23.@Autowired: Autowire the particular object to have in the spring controller.
+Two types in dependencies injection and autowired are setter and getter  but here we use Property based
+24. In Controller class autowired the sevrice refrence(object) and Sevice class autowired the repository reference(Object)
+25.@Query: if we want to go with JPQL we can pass the query inside and get the data.
+
+Steps:
+1.start.spring.io
+2. add the dependencies like spring web, spring boot devtools ,h2 database(in-memory-database), Spring data JPA, click on explore button.
+3. create one folder and add that project and click on expand all 
+4. open the intelliji or elcispe and import exesting maven project(add the maven dependencies and JRE system library)
+5. Clrl+Shift+A search te registory complier.autowire.allow.when.app.running as enable
+and File->settings->Build execution-> compiler->enable build project automatically
+5. Create entinty class,controller class(autowired the service class), service interface , serviceImpl class(autowired the repository class), repository interface it extends JpaRepository
+6.Post, get all dat, get by id , delete the data, update the data
+

@@ -1,0 +1,14 @@
+                                                                        JAVA
+1.Java REPL(Read Eval Print Loop)
+2.Jshell : The jshell tool allows you to execute Java code, getting immediate results.
+|  You can enter a Java definition (variable, method, class, etc), like:  int x = 8
+|  or a Java expression, like:  x + x
+|  or a Java statement or import.
+|  These little chunks of Java code are called 'snippets'.
+|
+|  There are also the jshell tool commands that allow you to understand and
+|  control what you are doing, like:  /list
+3. enter jshell for entry and /exit : for exit from jshell
+4.%d- integer and %s- string
+5.Variables:Doesnot start with number and but contains number, comvinations of letter, $ and under_score, cannot be keyword,CamcelCase
+6.

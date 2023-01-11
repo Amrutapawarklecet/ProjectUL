@@ -1,0 +1,20 @@
+1. $ docker-compose down -v  //old img erase
+2. $ docker-compose up -d --remove-orphans //up the img
+3. ./dev-migrate.sh // run the script like sql command 
+4. git status //changes
+5. git add . //add all the which changed
+6. git commit -m "Msg" //commit the chages
+7. git push // push all changes to git
+8. git pull //existy code from git or like 
+9. git pull origin branch name
+10. git pull --rebase origin branch name //exist code 
+11. git stash //remove all the changed file
+12. git stash pop // again it will all the changes like which we stash the changes
+13. git checkout -b "branch name"
+14. git branch -D branchName
+13. git clone //clone the project from repository
+14. mvn clean install -DSkipTests or mvn clean verify -DskipTests
+15. get fetch --all //fetch all exist branch which we craeted in git
+16. git cherry pick "6c6dee8e57351051f56ec8d4c50fce4fd31cb313" ,git add .,git cherry-pick --continue 
+17. git log //history all commits 
+18. git reset --hard origin/develop // exist code 

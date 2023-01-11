@@ -1,0 +1,348 @@
+https://test.nonprod.safecyber.com/MaturityPath/home
+............................
+
+https://outlook.office365.com/calendar/view/month
+
+https://knowledgebase.ul.com/display/COL/Azure+Deployment+Access+Points( all credtional)
+
+https://sonarqube.ul-ts.com/
+
+mvn checkstyle:check (Java)
+
+https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+...........................
+
+Sonar qube issue fix https://git.ul-ts.com/colab/api-services/-/commit/45fc48d1 (commit)
+..........................
+chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security
+
+https://helium.nonprod.safecyber.com/MaturityPath/signin(helium_develop)
+
+Maturity Path (safecyber.com)(test environment)
+
+generic-pdma-master@ul.com
+
+Welcome@01!
+
+.......................................
+
+excel_general_reports?dt_version_id=8407df6d-401a-4807-a389-e9f527694b3e&report_name=cryptography
+/api/reporting/dts
+
+https://ul-poc.cybellum.com/api/reporting/dts/excel_general_reports?dt_version_id=8407df6d-401a-4807-a389-e9f527694b3e&report_name=cryptography
+
+.............................................................................
+
+EmbeddedRedisTestServer.java
+
+ redisServer = RedisServer.builder().port(this.redisPort).setting("maxmemory 1024M").build();
+.........................................
+
+spdxReportEndpoint
+
+else if (category.replace("\n", "").replace("\r", "") == "General")
+            requirement = requirements.stream().filter(policy -> policy.getCategory().equalsIgnoreCase("General")).collect(Collectors.toList());
+
+...........................
+Upload a file in Json
+https://stackoverflow.com/questions/39037049/how-to-upload-a-file-and-json-data-in-postman
+.................................................
+
+http://localhost:8140/api/documents/v1/?deviceId=1&firmwareDocumentId=1&version=1&isCloneAssessmentEnabled=true
+...........................
+When we need latest code in branch then
+1. create new folder like fwc/11925
+2. git of that branch and git clone ssh://git@git.ul-ts.com:5022/colab/api-services.git
+3. cd api-services/ then it is moved to develop
+4.git push origin develop:feature/MRV-11925(branch name)
+
+............................................
+
+Test Environment   
+..............
+https://knowledgebase.ul.com/display/COL/Azure+Deployment+Access+Points 
+https://test.nonprod.safecyber.com/BinaryCheck/devices ---->test env
+https://acc.nonprod.safecyber.com/BinaryCheck/login   ----> UAT env
+https://test.nonprod.safecyber.com/dashboard/ --->creadits
+https://apexcharts.com/angular-chart-demos/pie-charts/simple-pie/
+...............................
+use db_fwc;
+INSERT INTO `transaction_details` (`tenant_id`, `user_id`, `order_id`, `firmware_id`, `type`, `description`, `created_date`, `credits`, `balance_credits`, `subscription`,
+ `monthly_credits`, `end_subscription_date`) VALUES ( 1077, 1080, 1, NULL, 'ADD_CREDIT', 'test', 1652255951891, 999.00, 999.00, 'PREMIUM', 999.00, 2652256041955)
+...............................
+https://www.youtube.com/watch?v=msD7TtIh48s&list=PLFh8wpMiEi88vWlQJj4KDzfpbIebBWIsX&index=21
+...................
+1.ssh-keygen -t rsa -b 2048 -C "amruta.pawar@ul.com"
+then paste the key from .ssh file as id_rsa
+and go to the gitlab -->edit profile -->SSH key and paste there this key
+2.git config --global user.email "amruta.pawar@ul.com"
+3.git config --global user.name "amruta pawar"
+4.git config --list
+5.copy the setting.xml in local c-user-amruta-.m2 open and paste the setting.xml file
+6.copy script.sh in created folader(marvin) 
+
+.....................................................
+
+1. git clone ,import projects (api-services) in IntelliJ
+2. mvn clean install -DSkipTests or mvn clean verify -DskipTests
+3. go to um-webapp folder and fwc-webapp folder, run this commands docker-compose down -v ,docker-compose up -d --remove-orphans
+4. go to um folder, fwcfolder and run ./dev-migrate.sh script
+5. Start colab-app in IntelliJ
+6. start fwc-app in IntelliJ
+7. copy package.json, package-lock.json, .npmc (from downloads folder) into ui folder of api-services, then run below command: run inside the ui :npm run start-fwc
+8. open the url given in the console with /login appended at the end
+9. give any email to register
+10. open http://localhost:8025 and verify the email, start assessment from the email body.
+11. if chrome doesn't work, then use this:
+chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security
+http://localhost:4900/fwc/login
+
+cd .. 
+npm version
+tab
+
+................................................
+api-services/ui
+1.PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install puppeteer
+2.npm cache clean
+3.npm cache clean --force
+4.npm cache rm
+5.git status
+6.npm config set strict-ssl false
+7.npm install or npm clean-installclclear
+8.http://localhost:4900/fwc/login
+
+.............................................................................................................
+
+1.$api-services/apps/um/um-webapp: docker-compose down -v,docker-compose up -d --remove-orphans
+2.$/api-services/apps/um: ./dev-migrate.sh
+3.$/apps/fwc: docker-compose down -v,docker-compose up -d --remove-orphans
+4.$/apps/fwc: ./dev-migrate.sh and run the intellij
+5.$apps/ui: npm run start-fwc
+6.http://localhost:4900/fwc/login
+7.http://localhost:8025/
+8.netstat -ano | findstr 8080
+9.taskkill /F /PID 12056
+10.TNSLSNR.EXE 
+..........................................................................................
+These can done when we need to current code into workplaces
+1.git status
+2.git stash --save the commit changes
+3.git pull --rebase origin develop_teamhelium (develop) then 
+3.git fetch --all
+4.git reset --hard origin/titanium_develop(git reset --hard origin/feature/MRV-7341
+5.git log
+.............................................................................................
+1.git config --global user.name "Your Name"
+2.git config --global user.email you@example.com
+3.git commit --amend --reset-author
+------------------------------------------------------------------------------------------
+Create Branch                
+1.git checkout -b feature/MRV-7594-7627
+2.git status
+3.git add .               
+4.git status
+5.git commit -m "MRV-7342 Backend Changes"
+6.git push origin feature/MRV-7342-7742:feature/MRV-7342  
+7.git pull --rebase origin feature/MRV-7341 
+8.git push origin feature/MRV-7342-7742:feature/MRV-7342 -f
+--------------------------------                                    
+These can be done before create MR
+1.git status
+2.git add .
+3.git status
+4.git commit -m "MRV-7594 Assessment Bug fix"
+( if branch not exist) (git checkout -b feature/MRV-7341)
+(git checkout develop)
+5.git push origin feature/MRV-8211-8937:feature/MRV-8211
+6.git pull --rebase origin feature/MRV-7594 
+7.git push origin develop:feature/MRV-7594-7627 -f
+8.https://git.ul-ts.com/colab/api-services
+9.colab >api-services>Commits --->select feature/MRV-7594-7627 then click on create merge requests 
+give the name for approve and send it for MR review --For MR(https://git.ul-ts.com/colab/api-services/-/commits/feature/MRV-7594)
+-need to click on merge and send it for testing
+10.colab >api-services>Merge requets> !270 --Pepling
+11.https://git.ul-ts.com/colab/api-services/-/tree/feature/MRV-7594 ---testing (api-services-repository)
+12.git checkout develop -->switch to develop branch
+13.git checkout -b feature/MRV-7594-7627 -->create new branch if not exist and switch
+13.git checkout feature/MRV-7594-7627 --> switch to particular branch
+fatal: A branch named 'feature/MRV-7552-7633' already exists.
+14.For delete --->
+git branch -D feature/MRV-10841-11239
+Deleted branch feature/MRV-7552-7633 (was 8d019f8ff).
+15.git checkout -b feature/MRV-7552-7633
+Switched to a new branch 'feature/MRV-7552-7633'
+----------------------------------------------------------------------------------
+For Develop branch
+.........................
+1.git pull --rebase origin develop,git log
+2.git cherry pick "6c6dee8e57351051f56ec8d4c50fce4fd31cb313" ,git log
+3.git push origin develop:feature/MRV-7595
+4.git push origin develop:feature/MRV-7595 -f
+...........................................
+These below step can be done before git status or git add(api-services/ui){frontEnd Part}
+.............................
+-npm run lint "./projects/ui-pdma-v2/**/*.ts"
+-npm run test ui-pdma-v2 -- --watch=true --source-map=false --code-coverage
+-node licenses/license-build-breaker.js
+-ng build --configuration=production ui-fwc
+
+git rebase --interactive HEAD~2   (make changes to one commit)
+
+-----------------------------------------------------------------
+To change workplaces into particular branch
+1.git pull --rebase  origin titanium_develop (branch name)
+2.git stash -->save the commit changes
+3.git status
+4.git pull --rebase origin develop
+5.git cherry pick "6c6dee8e57351051f56ec8d4c50fce4fd31cb313" and git cherry pick "0cabbbd8782a0065a13c58a8f69408e28a907501"
+ (https://git.ul-ts.com/colab/api-services/-/merge_requests/2762)
+6.git log
+7.(if i need current workplaces changes back) git stash pop (get the changes back again)
+8.git push origin develop:feature/MRV-7594
+----------------------------------------------------------
+If we remove the commets from code again then 
+..................................
+1.git status
+2.git diff ui/projects/ui-fwc/src/app/layout/devices/device-component.scss( paste from git status changes)
+3.git add .
+4.git status
+5.git commit -m "MRV-7342 Backend code formatted" 
+6.git push origin develop:feature/MRV-7594                        
+6.git push (particular branch) feature/MRV-7594  mer
+.................................
+................................
+
+https://git.ul-ts.com/colab/api-services/-/merge_requests/2802-->MR
+https://git.ul-ts.com/colab/api-services/-/tree/feature/MRV-7595 -->testing
+....................................................
+Cybellum >>https://ul-poc.cybellum.com/api/
+Username: acceptance_ul
+Password: 77EDUGcP6cx4
+................................... 
+https://ul-poc.cybellum.com/api/
+UN: test_env_ul
+PWD: MnQu6r79$Bls
+..........................
+https://ul.cybellum.com/digital-twins
+Username: Dimitris
+Pwd : Marvin2021
+...................
+https://ul-poc.cybellum.com/api/
+Username : dev_ul
+Password : LO#3yXJdt82&
+.................................
+http://json.parser.online.fr/ -->json parser online
+
+.................................
+update db_fwc.device set dt_version_id = 'd47d0b97-dae1-4d82-9392-3d371924568b' where id = 1;
+update db_fwc.device set dt_id = '6e9c0a14-4c79-43de-a486-6a2e93901bd2' where id = 1;
+..........................
+update db_fwc.firmware_document set dt_version_id= '2f278dfa-f2d6-4943-88e7-bb5c68131908' where id = 1;
+...................................................................
+update db_fwc.firmware_document set dt_version_id= '2f278dfa-f2d6-4943-88e7-bb5c68131908' where id = 1;
+update db_fwc.firmware_document set dt_version_id= '05bd1916-471e-43de-a4c6-94e4f5bb4974' where id = 1;
+......................................................
+https://git.ul-ts.com/colab/api-services/-/merge_requests/2826 formatted
+.............................................................................................
+If we get rebase 1/1 then                              
+1.git rebase --abort(use this to sub branch)
+2. git checkout feature/MRV-7341
+3. git pull --rebase origin develop
+4. git status
+5. git add 
+6.git rebase --continue
+7.mvn clean install -DskipTests or mvn clean verify -DskipTests
+8.git checkout feature/MRV-7341-7936
+9.git pull --rebase origin feature/MRV-12526
+10.git status
+11. git add  
+12. git commit -m ""  
+13.git push  
+https://knowledgebase.ul.com/pages/viewpage.action?spaceKey=COL&title=Azure+Deployment
+.................................................
+..................................
+if i'm working in one branch(someones task branch like) made the changes i that branch only suddenly you wANT TO create another branch save all changes to that branch
+create the branch in gitlab from working branch
+git status
+git stash =It remove all the changed files in your local.
+git status
+git stash pop = I t will add all your changes to your local
+git stash
+git fetch
+git checkout newly creatd branch
+git pull
+git stash pop
+git add .                                      
+git status
+git commit -m ""
+git push
+...............................
+
+...................................................
+Angular
+...........
+1.ng g c component-name
+2.
+..............................
+FOR RESOLVE CONFILIT(feature/MRV-7972-MRV-8341)
+1.git log
+2.git pull --rebase origin feature/MRV-7972
+3.git add
+4.git rebase --continue
+5.git push
+6.git push -f
+............
+FOR RESOLVE CONFILT For(feature/MRV-7972) before merged to develop
+1./c/ULCode/api-services(feature-MRV-7972)
+2.git pull --rebase origin develop
+3.resolve confilts
+4.git status
+5.git add (files name)
+6.git status
+7.git rebase --continue
+8.{if we get again confilit then
+   -git rebase --abort
+   -git pull
+   -git log -->get all my chages
+   -git pull --rebase origin develop 
+   -if confilit again slove
+   -git add(files)
+   -git rebase --continue(again slove confilit if there)
+   -git add
+9.git rebase --continue
+10.git push origin feature/MRV-7972:feature/MRV-7972-rebased(If we get failedto push some refs to '')then use following command
+11.git push origin titanium_develop:feature/MRV-11156-new
+..........
+ let month = '' + (d.getMonth() + 1);
+                let day = '' + d.getDate();:wq:
+                const year = d.getFullYear();
+                if (month.length < 2) month = '0' + month;
+                if (day.length < 2) day = '0' + day;
+                [year, month, day].join('-');
+....................................
+FOR RESOLVE CONFILT For(feature/MRV-7972) before merged to develop
+git checkout develop then follow below steps
+1.git fetch --all
+2.git reset --hard origin/develop , git reset --hard origin/develop_teamhelium, git log 
+3.git cherry-pick xbrymmvvvvvv(value of change file which you changed)
+4.Reslove confilit
+5.git add .
+6.git cherry-pick --continue
+7.git cherry-pick another file (cvbm,..lknbcf)
+8.Reslove confilict
+9.git add .
+10.git cherry-pick --continue
+11.git log
+12.git push origin develop:feature/MRV-8791 or git push develop:feature/MRV-8791-rebase
+..............................
+https://git.ul-ts.com/colab/api-services/-/tree/feature/MRV-7932-8934
+................................
+<span class="ml-2">{{'pages.device.toolbox.filter' | translate}}</span>
+<input placeholder="{{'pages.device.toolbox.search' | translate}}" class='ul-textbox -small'
+                               type='text' (keyup)="runFilter($event.target.value)"/>
+..........................
+IN POSTMAN
+http://localhost:8140/api/reporting/v1/policy/excel_general_reports/bf49e595-3ce1-4354-ba1a-903283fd5228?deviceId=2&id=2 
+....................
+

@@ -1,0 +1,194 @@
+1.What are the benefit of polymorphism.
+-->Performing same in multiple form (teacher teaching many students)
+Types Methodloading(compile time) and methodoverriden(Run time)
+ Advantages:
+ ->It helps programmers reuse the code,
+ ->Reduce the tight coupling and helpes for perform loss coupling
+ 
+ Disdavatages:
+ -->Polymorphism reduces the readability of the code (MethodOverriden) 
+ --> increse the tight coupling.
+ 
+ Example: class Addition(){
+ 
+  public int add(int a, int b){
+  return a+b;
+  }
+  
+  public float add(float a, float b){
+  return a+b;
+  }
+ } 
+ 
+2. Coupling
+ ->Coupling is nothing but the dependency of one class on the other.
+ 2 types
+ ->Loose coupling:When two classes, modules, or components have low dependencies on each other.(Independent on each other) (interface examples)
+ example: class Volume {
+
+   public static void main(String args[]) {
+
+        Cylinder b = new Cylinder(25, 25, 25);
+
+           System.out.println(b.getVolume());
+
+   }
+
+}
+
+final class Cylinder {
+
+    private int volume;
+
+    Cylinder(int length, int width, int height) {
+
+             this.volume = length * width * height;
+
+    }
+
+    public int getVolume() {
+
+             return volume;
+
+    }
+
+}
+->Tight Coupling:When two classes are highly dependent on each other
+
+class Subject {
+    Topic t = new Topic();
+    public void startReading()
+    {
+        t.understand();
+    }
+}
+class Topic {
+    public void understand()
+    {
+        System.out.println("Tight coupling concept");
+    }
+}
+
+3.What are the different way to initialize the object
+-->Object is the real world entity
+3 types:
+**Using new keyword.
+
+Tester tester1 = new Tester();
+**Using Class.forName() method
+
+Tester tester4 = (Tester)Class.forName("Tester").newInstance();
+**Using clone method.
+
+Tester tester2 = tester1.clone();
+
+4.Basic data structure in the java (https://www.javatpoint.com/data-structure-tutorial)
+Data Structure is a way to store and organize data so that it can be used efficiently.
+
+5.Collections(Implementation of hash, hashmap, hashset, concurrenthashmap?) and (Difference between Array, ArrayList, LinkedList)
+-->https://www.javatpoint.com/collections-in-java
+
+6. Write a program for the prime number , include the junit testing
+
+public class Main 
+{
+	static boolean flag= false;
+	
+     public static void main(String args[]) 
+     {
+  	   System.out.println("Enter a number");
+    	Scanner sc=new Scanner(System.in); 
+    	int num=sc.nextInt();
+    	for(int i=2;i<=num/2;i++) {  
+    		if(num%i==0) {  
+    			flag=true;
+    			break;
+    		}
+    	}
+    	if(flag==false) {
+    		System.out.println(num +"is a prime number");
+    	}
+    	
+    	else {
+    		System.out.println(num +" not is a prime number");
+
+    	}
+     }
+}
+
+7. Spring Security SSL how we can achieve
+->SSL – stands for Secure Sockets Layer, it is used for keep the data secure. It is the industry standard protocol for keeping an internet connection secure by safeguarding all sensitive data that is being sent between two systems, preventing hackers from reading and modifying any information transferred.
+
+server.port=8443
+server.ssl.key-alias=selfsigned_localhost_sslserver
+server.ssl.key-password=changeit
+server.ssl.key-store=classpath:ssl-server.jks
+server.ssl.key-store-provider=SUN
+server.ssl.key-store-type=JKS
+
+8.What is API Gateway
+-->An application programming interface (API) gateway is software that takes an application user’s request, routes it to one or more backend services
+-->https://www.ibm.com/cloud/blog/api-gateway#:~:text=An%20application%20programming%20interface%20%28API%29%20gateway%20is%20software,threat%20protection%20and%20other%20security%20for%20the%20application.
+
+9.Why String is immutable (https://www.javatpoint.com/immutable-string)
+Once String object is created its data or state can't be changed but a new String object is created.
+class Testimmutablestring{
+ public static void main(String args[]){
+   String s="Sachin";
+   s.concat(" Tendulkar");//concat() method appends the string at the end
+   System.out.println(s);//will print Sachin because strings are immutable objects
+ }
+}
+Now it can be understood by the diagram given below. Here Sachin is not changed but a new object is created with Sachin Tendulkar. That is why String is known as immutable.
+As you can see in the above figure that two objects are created but s reference variable still refers to "Sachin" not to "Sachin Tendulkar".
+
+But if we explicitly assign it to the reference variable, it will refer to "Sachin Tendulkar" object.
+
+10.Java 8 features
+Java 8 features with examples (beginnersbook.com)
+
+11.What is exception handelling why it require
+-->https://www.javatpoint.com/exception-handling-in-java
+
+12.ORM (Hibernate)
+
+
+13. Hibernate Mapping
+One cart have many items --> One to many 
+1.Bike manufacture can manufacture multiple models of the bike but the same bike model cannot be manufactured by multiple manufactures.
+https://www.google.com/amp/s/www.geeksforgeeks.org/hibernate-one-to-many-mapping/amp/(One to many)
+2.https://www.geeksforgeeks.org/hibernate-many-to-one-mapping/ (Many employee work in one company)
+3.one to one (https://www.geeksforgeeks.org/hibernate-one-to-one-mapping/) (one Employee has many address) (Jayant example)
+14.Advantage of hibernate over jdbc.
+-->Data base Dependency:The Hibernate is not dependent on the database whereas in the case of JDBC the queries that need to be written are dependent on the database.
+-->Optimized Code:Hibernate creates more shorter and optimized code. For example, by creating the connection while using Hibernate the developer should not need to write the complex queries because HCL is there to ease the written query whereas in JDBC it is the complete responsibility of the developer to program the queries.
+-->Lazy loading of data can be achieved with Hibernate. Lazy loading is a kind of data fetching mechanism and it helps in increasing performance. For example, if we have multiple child classes for parent classes but we need only some specific child classes to get loaded. Therefore through lazy loading, we can select some of the specific classes for execution.
+
+14. Spring web, JPA, h2, devtool, lombook,mysql
+
+15.Query to print higest salery of each department
+
+select MaxSlary from department;
+
+16.RequsetParameter and Pathvaraible difference
+
+
+17.SELECT * FROM marlabs.book;
+use marlabs;
+update book set bookname="c" where bookid=1;
+insert into book values (2,"Java", "Abhi",359.00);
+delete from book where bookid=1;
+create table book(int id,varChar name);
+
+18.Difference Between @RequestParam and @PathVariable in Spring MVC (https://javabeat.net/spring-mvc-requestparam-pathvariable/#:~:text=The%20key%20difference%20between%20%40RequestParam%20and%20%40PathVariable%20is,for%20accessing%20the%20values%20from%20the%20URI%20template.)
+-->@RequestParam annotation used for accessing the query parameter values from the request
+-->@PathVariables identifies the pattern that is used in the URI for the incoming request
+
+
+19.@Transtional :It is used to avoid data inconsistency
+https://www.youtube.com/watch?v=95kxPSbHzVg
+
+Example :Do want to save the inconsistency data in database so using @Transtional if any error accross then we use roback for payment 
+
+
+

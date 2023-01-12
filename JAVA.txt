@@ -10,5 +10,5 @@
 |  control what you are doing, like:  /list
 3. enter jshell for entry and /exit : for exit from jshell
 4.%d- integer and %s- string
-5.Variables:Doesnot start with number and but contains number, comvinations of letter, $ and under_score, cannot be keyword,CamcelCase
-6.
+5.Variables:Doesnot start with number and but contains number, contains of letter, $ and under_score, cannot be keyword,CamcelCase
+6.Variables Types: Primitive[byte(8byte),short(16),int(32),float(32),double(64),long(64),char(16),boolean(true and false)] and Non-primitive(Array,String)
